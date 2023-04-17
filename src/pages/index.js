@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Title name="Vincent Castro" course="BSIT"/>
+      {/* <Title name="Vincent Castro" course="BSIT"/> */}
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
@@ -41,7 +41,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      <Content></Content>
+        {/* <Content></Content> */}
         <div className={styles.center}>
           <Image
             className={styles.logo}
