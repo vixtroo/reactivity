@@ -7,16 +7,22 @@ export default function Calculator() {
     const [num1, setNum1] = useState(0)
     const [num2, setNum2] = useState(0)
     const [op, setOp] = useState('(operator)')
+    const operator = [
+        '+', '-', 'x', '/'
+    ]
 
     const getValue = (event) => {
         const value = event.target.value
         console.log(value)
         setNum1(value)
     }
+
     const getValue2 = (event) => {
         const value2 = event.target.value
         console.log(value2)
-        setNum2(value2)
+        if (operator.includes(op)) {
+            setNum2(value2)
+        }
     }
 
     const getOpValue = (event) => {
@@ -48,7 +54,6 @@ export default function Calculator() {
         else {
             return 'Invalid'
         }
-
     }
 
     return (
@@ -79,7 +84,7 @@ export default function Calculator() {
                     </div>
                     <div className={styles.buttons_row}>
                         <button className={styles.buttons} onClick={reset}>c</button>
-                        <button className={styles.buttons} value={0} onClick={getValue}>0</button>
+                        <button className={styles.buttons} value={0} onClick={num1 ? getValue2 : getValue}>0</button>
                         <button className={styles.buttons} value={'+'} onClick={getOpValue}>+</button>
                         <button className={styles.buttons} style={{ backgroundColor: 'teal' }} onClick={calculate}>=</button>
                     </div>
