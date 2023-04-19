@@ -13,8 +13,8 @@ export default function Calculator() {
 
     const getValue = (event) => {
         const value = event.target.value
+        setNum1(num1 + value)
         console.log(value)
-        setNum1(value)
     }
 
     const getValue2 = (event) => {
@@ -83,7 +83,7 @@ export default function Calculator() {
                         <button className={styles.buttons} value={'-'} onClick={getOpValue}>-</button>
                     </div>
                     <div className={styles.buttons_row}>
-                        <button className={styles.buttons} onClick={reset}>c</button>
+                        <button className={styles.buttons} onClick={reset}>C</button>
                         <button className={styles.buttons} value={0} onClick={num1 ? getValue2 : getValue}>0</button>
                         <button className={styles.buttons} value={'+'} onClick={getOpValue}>+</button>
                         <button className={styles.buttons} style={{ backgroundColor: 'teal' }} onClick={calculate}>=</button>
