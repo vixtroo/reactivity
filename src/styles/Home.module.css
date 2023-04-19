@@ -302,9 +302,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  height: 700px;
+  height: auto;
   width: 100%;
   background-color: white;
+  padding: 30px;
 }
 
 .formContainer {

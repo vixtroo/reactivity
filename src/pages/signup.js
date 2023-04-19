@@ -43,7 +43,7 @@ const FormsFormik = () => {
                         pronouns: "",
                     }}
                     onSubmit={(values, actions) => {
-                        setDisplay(`I'm ${values?.firstName} ${values?.lastName}, my email is ${values?.email}. I was born on ${values?.date}.`);
+                        setDisplay(`I'm ${values?.firstName} ${values?.lastName}, my email is ${values?.email}. I was born on ${values?.date}. Gender: ${values?.gender}`);
                         actions.resetForm({
                             values: {
                                 firstName: "",
