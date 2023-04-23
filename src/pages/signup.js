@@ -80,7 +80,7 @@ const FormsFormik = () => {
 
     const patchPosts = (passValue) => {
         axios
-            .patch(`${api}/${passValue?.id}`, {
+            .put(`${api}/${passValue?.id}`, {
                 id: passValue?.id,
                 first_name: passValue?.firstName,
                 last_name: passValue?.lastName,
