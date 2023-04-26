@@ -3,6 +3,7 @@ import TopNavbar2 from "@/components/top-navbar-2";
 import Slider from "@/components/slider";
 import Footer from "@/components/pup-home-footer";
 import Footer2 from "@/components/pup-home-footer2";
+import Image from 'next/image';
 
 const Home = () => {
     return (
@@ -11,7 +12,7 @@ const Home = () => {
             <TopNavbar />
             <TopNavbar2/>
             <Slider/>
-            
+
             <div className="flex flex-wrap content-center justify-center border-b-[1px] border-grey h-52 other-links-container">
                 <a href="" className="other-links">
                     <div className="icon-container">
@@ -53,6 +54,66 @@ const Home = () => {
                     </div>
                     <p>Campus Life</p>
                 </a>
+            </div>
+
+            <div className="flex flex-wrap content-center justify-center h-auto mt-14">
+                <div className="flex flex-wrap w-3/4 h-auto center">
+                    <div className="w-2/5 content-container">
+                        <div className="title">
+                            <h1 className="mb-2 font-bold text-red-800">Announcements and Advisories</h1>
+                        </div>
+                        <div className="flex flex-wrap overflow-auto overflow-x-hidden content">
+                            <div className="announcements">
+                                <a href="#">Administrative Applicants for Selection/Promotion: List of All Applicants (First and Second Level) April 2023</a>
+                                <p>Posted: April 20, 2023</p>
+                            </div>
+                            <div className="announcements">
+                                <a href="#">Advisory on the Submission of Online Application for Graduation and Other Scheduled Activities for Year-End Graduation (Second Semester) A.Y. 2022-2023</a>
+                                <p>Posted: April 10, 2023</p>
+                            </div>
+                            <div className="announcements">
+                                <a href="#">PUP ICT Office is looking for Computer Programmers (J.O.)</a>
+                                <p>Posted: March 02, 2023</p>
+                            </div>
+                            <div className="announcements">
+                                <a href="#">List of Qualified Applicants for Promotion (First and Second Level Positions) Batches 1, 2, and 3</a>
+                                <p>Posted: February 07, 2023</p>
+                            </div>
+                            <div className="announcements">
+                                <a href="#">List of Eligible Applicants for Promotion (First and Second Level Positions)</a>
+                                <p>Posted: February 01, 2023</p>
+                            </div>
+                            <div className="announcements">
+                                <a href="#">Advisory to All Graduates of the PUP Main Campus (Sta. Mesa, Manila)</a>
+                                <p>Posted: September 16, 2022</p>
+                            </div>
+                            <div className="announcements">
+                                <a href="#">Internal Guidelines for Opt-Out and Voluntary Contribution of Students under Republic Act 10931</a>
+                                <p>Posted: April 04, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-2/5 bg-red-500 content-container">
+                        
+                    </div>
+                    <div className="flex flex-col flex-wrap items-center justify-center w-1/5 content-container">
+                        <div className="img-container">
+                            <Image src="/img1.jpg" alt="" width={200} height={150}/>
+                        </div>
+                        <div className="img-container">
+                            <Image src="/img2.jpg" alt="" width={200} height={150}/>
+                        </div>
+                        <div className="img-container">
+                            <Image src="/img3.jpg" alt="" width={200} height={150}/>
+                        </div>
+                        <div className="img-container">
+                            <Image src="/img4.jpg" alt="" width={200} height={150}/>
+                        </div>
+                        <div className="img-container">
+                            <Image src="/img5.jpg" alt="" width={200} height={150}/>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className="flex flex-wrap justify-center mt-10 border-b-[1px] border-grey">
                 <div className="flex justify-center w-3/4 h-auto">

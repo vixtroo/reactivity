@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html{
+    scroll-behavior: smooth;
+}
+
 .top-navbar-links li{
     display: flex;
     padding: 5px 10px 5px 10px;
@@ -27,8 +31,9 @@
 }
 
 .nav-container, .nav2-container{
-    background-color: rgba(233, 204, 160, 0.76);
+    // background-color: rgba(233, 204, 160, 0.76);
     backdrop-filter: blur(10px) saturate(125%);
+    background-image: url(/bg.jpg);
 }
 
 .search{
@@ -167,4 +172,55 @@
 
 .footer2-items li:hover{
     text-decoration: underline;
+}
+
+.content-container{
+    height: 620px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 40px;
+    width: 60%;
+    border-bottom: 1px solid #800;
+}
+
+.announcements{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: auto;
+    width: 320px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.content{
+    height: 600px;
+    box-sizing: border-box;
+}
+
+.content-container a{
+    color: #800;
+}
+
+.content-container p{
+    color: rgb(100 116 139);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.img-container{
+    height: 150px;
+    width: 200px;
+}
+
+.img-container img{
+    border-radius: 5px;
 }
