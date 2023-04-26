@@ -22,8 +22,7 @@ const TopNavbar = () => {
                     <div className="flex flex-wrap content-center text-sm h-9 contact text-slate-500 hover:bg-red-800 hover:text-white hover:cursor-pointer">
                         <a href="#">Contact Us</a>
                     </div>
-                </div>
-                    
+                </div>  
             </div>
         </div>
     )

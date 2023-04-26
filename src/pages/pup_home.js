@@ -2,6 +2,7 @@ import TopNavbar from "@/components/top-navbar";
 import TopNavbar2 from "@/components/top-navbar-2";
 import Slider from "@/components/slider";
 import Footer from "@/components/pup-home-footer";
+import Footer2 from "@/components/pup-home-footer2";
 
 const Home = () => {
     return (
@@ -69,6 +70,7 @@ const Home = () => {
                 </div>
             </div>
             <Footer/>
+            <Footer2/>
         </div>
     )
 }

@@ -33,7 +33,7 @@
 
 .search{
     height: 28px;
-    width: 150px;
+    width: 175px;
     border: .5px solid grey;
     border-bottom-left-radius: 2px;
     border-top-left-radius: 2px;
@@ -128,4 +128,43 @@
 .contact-us span{
     color:dimgrey;
     font-weight: 600;
+}
+
+.social-icons{
+    display: flex;
+    flex-wrap: wrap;
+    height: 48px;
+    width: 48px;
+    background-color: #800;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    margin-right: 25px;
+    transition: .5s;
+}
+
+.credit p{
+    color: rgb(100 116 139);
+}
+
+.footer2-items{
+    display: flex;
+    height: 224px;
+}
+.footer2-items h1{
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    color: rgb(100 116 139);
+}
+
+.footer2-items p{
+    font-size: 10px;
+    color: rgb(100 116 139);
+}
+
+.footer2-items li:hover{
+    text-decoration: underline;
 }
