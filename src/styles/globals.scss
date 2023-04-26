@@ -1,0 +1,131 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.top-navbar-links li{
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    height: 36px;
+    align-items: center;
+    transition: .5s;
+}
+
+.top-navbar-links li:hover{
+    color: white;
+    background-color: #800;
+    cursor: pointer;
+}
+
+.top-navbar2-links li{
+    margin-right: 40px;
+}
+
+.contact{
+    transition: .5s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-container, .nav2-container{
+    background-color: rgba(233, 204, 160, 0.76);
+    backdrop-filter: blur(10px) saturate(125%);
+}
+
+.search{
+    height: 28px;
+    width: 150px;
+    border: .5px solid grey;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    font-size: 12px;
+    outline: none;
+}
+
+.other-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 150px;
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color:#800;
+    transition: .5s;
+}
+
+.icon-border{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 3px solid #800;
+    transition: .5s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.other-links:hover{
+    text-decoration: underline;
+    .icon-border{
+        color: white;
+        background-color: #800;
+    }
+}
+.other-links p{
+    text-align: center;
+}
+
+.icon-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    justify-content: center;
+}
+
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 25%;
+    height: 288px;
+}
+
+.footer-links-container-container p{
+    color: #800;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.quick-links{
+    line-height: 26px;
+    color:  rgb(100 116 139);
+}
+
+.quick-links li:hover{
+    text-decoration: underline;
+}
+
+.weblinks a{
+    padding-right: 5px;
+    color: rgb(100 116 139);
+}
+
+.weblinks a:hover{
+    text-decoration: underline;
+}
+
+.contact-us li{
+// footer
+    color: rgb(100 116 139);
+}
+
+.contact-us span{
+    color:dimgrey;
+    font-weight: 600;
+}
