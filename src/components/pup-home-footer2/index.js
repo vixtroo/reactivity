@@ -16,14 +16,14 @@ const Footer2 = () =>{
                 <div className="flex flex-col w-2/5 pl-10 footer2-items">
                     <h1>About GOVPH</h1>
                     <p style={{width: '280px'}}>Learn more about the Philippine government, its structure, how government works and the people behind it.</p>
-                    <ul className='mt-1 text-xs font-semibold leading-6 text-gray-500'>
+                    <ul className='mt-1 text-xs leading-6'>
                         <li><a href="#">Official Gazette</a></li>
                         <li><a href="#">Open Data Portal</a></li>
                     </ul>
                 </div>
                 <div className="flex-col w-1/5 footer2-items">
                     <h1>Government Links</h1>
-                    <ul className='text-xs font-semibold leading-5 text-gray-500'>
+                    <ul className='text-xs leading-5'>
                         <li><a href="#">Office of the President</a></li>
                         <li><a href="#">Office of the Vice President</a></li>
                         <li><a href="#">Senate of the Philippines</a></li>

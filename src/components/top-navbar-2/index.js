@@ -4,7 +4,7 @@ import {Formik, Field, Form} from "formik"
 const TopNavbar2 = () =>{
 
     return(
-        <div className="flex flex-wrap content-center justify-center h-24 nav2-container nav-container">
+        <div className="flex flex-wrap content-center justify-center h-24 nav2-container">
             <div className="flex flex-wrap justify-between w-3/4">
                 <div className="flex">
                     <div>

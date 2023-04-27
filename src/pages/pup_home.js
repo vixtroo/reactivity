@@ -4,10 +4,59 @@ import Slider from "@/components/slider";
 import Footer from "@/components/pup-home-footer";
 import Footer2 from "@/components/pup-home-footer2";
 import Image from 'next/image';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { useState } from 'react';
 
 const Home = () => {
+
+    const announcements = [
+        {title: 'Administrative Applicants for Selection/Promotion: List of All Applicants (First and Second Level) April 2023',
+        date: 'April 20, 2023',
+        link: '#'},
+        {title: 'Advisory on the Submission of Online Application for Graduation and Other Scheduled Activities for Year-End Graduation (Second Semester) A.Y. 2022-2023',
+        date: 'April 10, 2023',
+        link: '#'},
+        {title: 'PUP ICT Office is looking for Computer Programmers (J.O.)',
+        date: 'March 02, 2023',
+        link: '#'},
+        {title: 'List of Qualified Applicants for Promotion (First and Second Level Positions) Batches 1, 2, and 3',
+        date: 'February 07, 2023',
+        link: '#'},
+        {title: 'List of Eligible Applicants for Promotion (First and Second Level Positions)',
+        date: 'February 01, 2023',
+        link: '#'},
+        {title: 'Advisory to All Graduates of the PUP Main Campus (Sta. Mesa, Manila)',
+        date: 'September 16, 2022',
+        link: '#'},
+        {title: 'Internal Guidelines for Opt-Out and Voluntary Contribution of Students under Republic Act 10931',
+        date: 'April 04, 2022',
+        link: '#'},
+    ]
+    const images = [
+        {src: '/img1.jpg'},
+        {src: '/img2.jpg'},
+        {src: '/img3.jpg'},
+        {src: '/img4.jpg'},
+        {src: '/img5.jpg'},
+    ]
+    const pupNews = [
+        {src: '/news1.jpg',
+        title: 'PHIVOLCS commits to training PUP on REDAS',
+        link: '#',
+        date: 'April 26, 2023'},
+        {src: '/news2.jpg',
+        title: 'Earth Day 2023 celebrated through the arts',
+        link: '#',
+        date: 'April 26, 2023'},
+        {src: '/news3.jpg',
+        title: 'DBM Sec. Pangandaman and DepEd Usec Jumamil-Mercado receives Tanglaw ng Bayan Award',
+        link: '',
+        date: 'April 25, 2023'},
+    ]
+    const [slideIndex, setSlideIndex] = useState(0);
+
     return (
-        
         <div className="flex flex-col flex-wrap justify-center">
             <TopNavbar />
             <TopNavbar2/>
@@ -63,71 +112,54 @@ const Home = () => {
                             <h1 className="mb-2 font-bold text-red-800">Announcements and Advisories</h1>
                         </div>
                         <div className="flex flex-wrap overflow-auto overflow-x-hidden content">
-                            <div className="announcements">
-                                <a href="#">Administrative Applicants for Selection/Promotion: List of All Applicants (First and Second Level) April 2023</a>
-                                <p>Posted: April 20, 2023</p>
-                            </div>
-                            <div className="announcements">
-                                <a href="#">Advisory on the Submission of Online Application for Graduation and Other Scheduled Activities for Year-End Graduation (Second Semester) A.Y. 2022-2023</a>
-                                <p>Posted: April 10, 2023</p>
-                            </div>
-                            <div className="announcements">
-                                <a href="#">PUP ICT Office is looking for Computer Programmers (J.O.)</a>
-                                <p>Posted: March 02, 2023</p>
-                            </div>
-                            <div className="announcements">
-                                <a href="#">List of Qualified Applicants for Promotion (First and Second Level Positions) Batches 1, 2, and 3</a>
-                                <p>Posted: February 07, 2023</p>
-                            </div>
-                            <div className="announcements">
-                                <a href="#">List of Eligible Applicants for Promotion (First and Second Level Positions)</a>
-                                <p>Posted: February 01, 2023</p>
-                            </div>
-                            <div className="announcements">
-                                <a href="#">Advisory to All Graduates of the PUP Main Campus (Sta. Mesa, Manila)</a>
-                                <p>Posted: September 16, 2022</p>
-                            </div>
-                            <div className="announcements">
-                                <a href="#">Internal Guidelines for Opt-Out and Voluntary Contribution of Students under Republic Act 10931</a>
-                                <p>Posted: April 04, 2022</p>
-                            </div>
+                            {announcements.map((announcement, index) =>(
+                                <div key="" className="announcements">
+                                    <a href={announcement.link}>{announcement.title}</a>
+                                    <p>Posted: {announcement.date}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className="w-2/5 content-container">
                         <div className="title">
                             <h1 className="mb-2 font-bold text-red-800">Latest News from the University</h1>
                         </div>
+                        <div>
+                        <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showIndicators={false}>
+                            {pupNews.map((news, index) => (
+                                <div key="" className="flex flex-col flex-wrap justify-start">
+                                    <div key={index}>
+                                        <img src={news.src} alt={`Image ${index}`} className="news-img"/>
+                                    </div>
+                                    <div className="flex flex-col flex-wrap hover:underline">
+                                        <a href={news.link} className="font-semibold">{news.title}</a>
+                                        <p>{news.date}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </Carousel>
+                        </div>
                     </div>
                     <div className="flex flex-col flex-wrap items-center justify-center w-1/5 content-container">
-                        <div className="img-container">
-                            <Image src="/img1.jpg" alt="" width={200} height={150}/>
-                        </div>
-                        <div className="img-container">
-                            <Image src="/img2.jpg" alt="" width={200} height={150}/>
-                        </div>
-                        <div className="img-container">
-                            <Image src="/img3.jpg" alt="" width={200} height={150}/>
-                        </div>
-                        <div className="img-container">
-                            <Image src="/img4.jpg" alt="" width={200} height={150}/>
-                        </div>
-                        <div className="img-container">
-                            <Image src="/img5.jpg" alt="" width={200} height={150}/>
-                        </div>
+                        {images.map((image, index) =>(
+                            <div key=""  className="img-container">
+                                <a href="#"><Image src={image.src} alt="" width={200} height={150}/></a>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
             <div className="flex flex-wrap justify-center mt-10 border-b-[1px] border-grey">
                 <div className="flex justify-center w-3/4 h-auto embed">
-                    <div className="mr-5">
+                    <div className="mr-5 ">
                         <a class="twitter-timeline" data-width="350" data-height="885" data-theme="dark" href="https://twitter.com/papicurl?ref_src=twsrc%5Etfw">Tweets by papicurl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
-                    <div className="ml-5">
+                    <div className="ml-5 2/3">
                         <div className="mb-6">
-                            <iframe width="650" height="500" src="https://www.youtube.com/embed/oM6-umUNH-4" title="[오늘의 지수] EP.3 M/V BEHIND" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="750" height="500" src="https://www.youtube.com/embed/oM6-umUNH-4" title="[오늘의 지수] EP.3 M/V BEHIND" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                         <div className="mb-2">
-                            <iframe width="650" height="360"  src="https://open.spotify.com/embed/playlist/0whUCQp9szryvQjXBuNqFb?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <iframe width="750" height="360"  src="https://open.spotify.com/embed/playlist/0whUCQp9szryvQjXBuNqFb?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>

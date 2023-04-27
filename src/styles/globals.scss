@@ -2,19 +2,20 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html{
-    scroll-behavior: smooth;
+*{
+    box-sizing: border-box;
 }
 
 .top-navbar-links li{
     display: flex;
-    padding: 5px 10px 5px 10px;
-    height: 36px;
+    padding: 5px 12px 5px 12px;
+    height: 40px;
     align-items: center;
-    transition: .5s;
+    transition: .2s;
+    color: #666666;
 }
 
-.top-navbar-links li:hover{
+.nav-container li:hover{
     color: white;
     background-color: #800;
     cursor: pointer;
@@ -25,15 +26,19 @@ html{
 }
 
 .contact{
-    transition: .5s;
+    transition: .2s;
     padding-left: 10px;
     padding-right: 10px;
+    color: #666666;
 }
 
 .nav-container, .nav2-container{
     // background-color: rgba(233, 204, 160, 0.76);
     backdrop-filter: blur(10px) saturate(125%);
     background-image: url(/bg.jpg);
+}
+.nav2-container h2, .footer-links a{
+    color: #666666;
 }
 
 @media screen and (max-width: 768px){
@@ -52,21 +57,22 @@ html{
         margin-bottom: 20px;
         width: 80%;
         height: auto;
+        // transform: scale(3);
     }
     .announcements{
-        width: 500px;
-    }
-    .img-container{
-        transform: scale(3);
-        height: auto;
-        width: auto;
-        // position: relative;
+        width: 700px;
     }
     .footer-links-container-container{
         flex-direction: column;
         height: auto;
         flex-direction: column;
-        display: block;
+    }
+    .embed{
+        width: 100%;
+        align-items: center;
+    }
+    .img-container{
+        transform: scale(3);
     }
 }
 
@@ -105,7 +111,7 @@ html{
     width: 70px;
     border-radius: 50%;
     border: 3px solid #800;
-    transition: .5s;
+    transition: .2s;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -152,7 +158,7 @@ html{
 
 .weblinks a{
     padding-right: 5px;
-    color: rgb(100 116 139);
+    color: #666666;
 }
 
 .weblinks a:hover{
@@ -161,11 +167,11 @@ html{
 
 .contact-us li{
 // footer
-    color: rgb(100 116 139);
+    color: #555555;
 }
 
 .contact-us span{
-    color:dimgrey;
+    color:#555555;
     font-weight: 600;
 }
 
@@ -184,24 +190,29 @@ html{
 }
 
 .credit p{
-    color: rgb(100 116 139);
+    color: #555555;
 }
 
 .footer2-items{
     display: flex;
     height: 224px;
 }
+
+.footer2-items li{
+    color: #888888;
+}
+
 .footer2-items h1{
     font-weight: 600;
     font-size: 12px;
     margin-bottom: 10px;
     padding-top: 20px;
-    color: rgb(100 116 139);
+    color: #555555;
 }
 
 .footer2-items p{
     font-size: 10px;
-    color: rgb(100 116 139);
+    color: #666666;
 }
 
 .footer2-items li:hover{
@@ -245,7 +256,7 @@ html{
 }
 
 .content-container p{
-    color: rgb(100 116 139);
+    color: #555555;
     font-size: 12px;
     margin-top: 10px;
 }
@@ -262,3 +273,20 @@ html{
 .announcements a:hover{
     text-decoration: underline;
 }
+
+// SLIDER
+.slider{
+    height: 530px;
+}
+
+.slider button{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.news-img{
+    height: 480px;
+}
+
