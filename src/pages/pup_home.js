@@ -57,7 +57,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-wrap content-center justify-center h-auto mt-14">
-                <div className="flex flex-wrap w-3/4 h-auto center">
+                <div className="flex flex-wrap w-3/4 h-auto content-container-container">
                     <div className="w-2/5 content-container">
                         <div className="title">
                             <h1 className="mb-2 font-bold text-red-800">Announcements and Advisories</h1>
@@ -118,7 +118,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="flex flex-wrap justify-center mt-10 border-b-[1px] border-grey">
-                <div className="flex justify-center w-3/4 h-auto">
+                <div className="flex justify-center w-3/4 h-auto embed">
                     <div className="mr-5">
                         <a class="twitter-timeline" data-width="350" data-height="885" data-theme="dark" href="https://twitter.com/papicurl?ref_src=twsrc%5Etfw">Tweets by papicurl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>

@@ -3,18 +3,18 @@ const TopNavbar = () => {
 
     return (
         <div className="flex flex-wrap content-center justify-center border-white h-9 nav-container border-b-[.5px]">
-            <div className="flex flex-wrap content-center justify-between w-3/4 h-9">
+            <div className="flex flex-wrap content-center justify-center w-3/4 lg:justify-between h-9 nav">
                 <div className="flex">
                     <div className="flex flex-wrap justify-center w-16 hover:bg-red-800">
-                        <a href="#"><Image src="/govph.png" alt="" width={30} height={30}/></a>
+                        <a href="#"><Image src="/govph.png" alt="" width={30} height={30} transition={.5}/></a>
                     </div>
                     <div className="flex flex-wrap content-center h-9 top-navbar-links">
                         <ul className="flex inline text-sm text-slate-500">
                                 <li><a href="#">Home</a></li>
-                                <li><a href="#">Good Governance</a></li>
-                                <li><a href="#">Transparency</a></li>
-                                <li><a href="#">International Affairs</a></li>
-                                <li><a href="#">Bid Notices and Invitation</a></li>
+                                <li><a href="#" className='hidden md:flex'>Good Governance</a></li>
+                                <li><a href="#" className='hidden md:flex'>Transparency</a></li>
+                                <li><a href="#" className='hidden lg:flex'>International Affairs</a></li>
+                                <li><a href="#" className='hidden md:flex'>Bid Notices and Invitation</a></li>
                         </ul>
                     </div>
                 </div>

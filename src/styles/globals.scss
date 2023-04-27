@@ -36,6 +36,40 @@ html{
     background-image: url(/bg.jpg);
 }
 
+@media screen and (max-width: 768px){
+    .nav2-container{
+        background-color: #800;
+        background-image: none;
+    }
+    .other-links{
+        transform: scale(1.5);
+    }
+    .content-container-container{
+        flex-direction: column;
+        align-content: center;
+    }
+    .content-container{
+        margin-bottom: 20px;
+        width: 80%;
+        height: auto;
+    }
+    .announcements{
+        width: 500px;
+    }
+    .img-container{
+        transform: scale(3);
+        height: auto;
+        width: auto;
+        // position: relative;
+    }
+    .footer-links-container-container{
+        flex-direction: column;
+        height: auto;
+        flex-direction: column;
+        display: block;
+    }
+}
+
 .search{
     height: 28px;
     width: 175px;
