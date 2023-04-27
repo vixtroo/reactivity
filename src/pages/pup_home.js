@@ -93,8 +93,10 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-2/5 bg-red-500 content-container">
-                        
+                    <div className="w-2/5 content-container">
+                        <div className="title">
+                            <h1 className="mb-2 font-bold text-red-800">Latest News from the University</h1>
+                        </div>
                     </div>
                     <div className="flex flex-col flex-wrap items-center justify-center w-1/5 content-container">
                         <div className="img-container">
