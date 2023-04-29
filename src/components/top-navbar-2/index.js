@@ -3,6 +3,13 @@ import {Formik, Field, Form} from "formik"
 
 const TopNavbar2 = () =>{
 
+    const topNav2links = [
+        {link: '#', title: 'ABOUT PUP'},
+        {link: '#', title: 'ACADEMIC'},
+        {link: '#', title: 'STUDENTS'},
+        {link: '#', title: 'RESEARCH'},
+    ]
+
     return(
         <div className="flex flex-wrap content-center justify-center h-24 nav2-container">
             <div className="flex flex-wrap justify-between w-3/4">
@@ -17,10 +24,9 @@ const TopNavbar2 = () =>{
                         </div>
                         <div className="flex-wrap content-center h-6 font-bold top-navbar2-links mt-3.5 ">
                             <ul className="flex inline font-serif text-sm text-red-800">
-                                    <li><a href="#">ABOUT PUP</a></li>
-                                    <li><a href="#">ACADEMIC</a></li>
-                                    <li><a href="#">STUDENTS</a></li>
-                                    <li><a href="#">RESEARCH</a></li>
+                                {topNav2links.map((topNav2link, index)=>(
+                                    <li key={index}><a href={topNav2link.link}>{topNav2link.title}</a></li>
+                                ))}
                             </ul>
                         </div>
                     </div>
