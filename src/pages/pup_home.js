@@ -62,6 +62,14 @@ const Home = () => {
     ]
     const [slideIndex, setSlideIndex] = useState(0);
 
+    const handlePrevClick = () => {
+        setSlideIndex((slideIndex - 1 + pupNews.length) % pupNews.length);
+    };
+    
+    const handleNextClick = () => {
+        setSlideIndex((slideIndex + 1) % pupNews.length);
+    };
+
     return (
         <div className="flex flex-col flex-wrap justify-center">
             <TopNavbar />
@@ -101,22 +109,33 @@ const Home = () => {
                     <div className="w-2/5 content-container">
                         <div className="title">
                             <h1 className="mb-2 font-bold text-red-800">Latest News from the University</h1>
-                            <div className="slider-buttons"></div>
+                            <div className="slider-buttons-container">
+                                <button onClick={handlePrevClick} className="news-slider-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={4} stroke="currentColor" className="w-3 h-3">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                    </svg>
+                                </button>
+                                <button onClick={handleNextClick} className="news-slider-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={4} stroke="currentColor" className="w-3 h-3">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                        <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showIndicators={false}>
-                            {pupNews.map((news, index) => (
-                                <div key="" className="flex flex-col flex-wrap justify-start">
-                                    <div key={index}>
-                                        <img src={news.src} alt={`Image ${index}`} className="news-img"/>
+                        <div className="pt-5 pr-5">
+                            <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showIndicators={false} showArrows={false}>
+                                {pupNews.map((news, index) => (
+                                    <div key="" className="flex flex-col flex-wrap">
+                                        <div key={index}>
+                                            <img src={news.src} alt={`Image ${index}`} className="news-img"/>
+                                        </div>
+                                        <div className="flex flex-col pt-5 pl-2 hover:underline">
+                                            <a href={news.link} className="h-auto font-semibold text-left">{news.title}</a>
+                                            <p className="text-left">{news.date}</p>
+                                        </div>
                                     </div>
-                                    <div className="flex flex-col flex-wrap hover:underline">
-                                        <a href={news.link} className="font-semibold">{news.title}</a>
-                                        <p>{news.date}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </Carousel>
+                                ))}
+                            </Carousel>
                         </div>
                     </div>
                     <div className="flex flex-col flex-wrap items-center justify-center w-1/5 content-container">
