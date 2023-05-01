@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useState } from 'react';
-import { announcements, iconLinks, pupNews, images } from "@/helpers/data";
+import { announcements, iconLinks, pupNews, images } from "@/helpers/main_data";
 
 const Home = () => {
 
@@ -99,14 +99,14 @@ const Home = () => {
             <div className="flex flex-wrap justify-center mt-10 border-b-[1px] border-grey">
                 <div className="flex flex-col justify-center w-3/4 h-auto embed md:flex-row">
                     <div className="mr-0 md:mr-5 twitter">
-                    <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/papicurl?ref_src=twsrc%5Etfw">Tweets by papicurl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a className="twitter-timeline" data-theme="dark" href="https://twitter.com/papicurl?ref_src=twsrc%5Etfw">Tweets by papicurl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                     <div className="justify-center w-full ml-5 md:w-auto">
                         <div className="mb-6 yt-spot-container">
-                            <iframe className="yt" src="https://www.youtube.com/embed/oM6-umUNH-4" title="[오늘의 지수] EP.3 M/V BEHIND" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe className="yt" src="https://www.youtube.com/embed/oM6-umUNH-4" title="[오늘의 지수] EP.3 M/V BEHIND" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                         </div>
                         <div className="mb-2 yt-spot-container">
-                            <iframe className="spotify"  src="https://open.spotify.com/embed/playlist/0whUCQp9szryvQjXBuNqFb?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <iframe className="spotify"  src="https://open.spotify.com/embed/playlist/0whUCQp9szryvQjXBuNqFb?utm_source=generator" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
