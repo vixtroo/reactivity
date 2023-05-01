@@ -45,7 +45,7 @@ const Slider = () =>{
       };
 
       const customIndicator = (onClickHandler, isSelected, index, label) => {
-        const indicatorSize = 20; // set the size of the indicator here
+        const indicatorSize = 20;
         const style = {
           width: `${indicatorSize}px`,
           height: `${indicatorSize}px`,
@@ -71,7 +71,7 @@ const Slider = () =>{
       
 
       return (
-        <div className='slider' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} style={{ position: 'relative' }} >
+        <div className='slider' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showArrows={false} renderIndicator={customIndicator}>
                 {images.map((image, index) => (
                     <div key={index}>

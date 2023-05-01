@@ -44,7 +44,7 @@ const Footer = () =>{
     ]
     return(
         <div className="flex flex-wrap content-center justify-center bg-neutral-100 h-96">
-            <div className="flex flex-wrap content-center w-3/4 h-80 footer-links-container-container">
+            <div className="flex flex-wrap content-center h-80 footer-links-container-container">
                 <div className="footer-links">
                     <p>ONLINE SERVICES</p>
                     <ul className="quick-links">
