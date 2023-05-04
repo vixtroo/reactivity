@@ -1,13 +1,14 @@
-import TopNavbar from "@/components/top-navbar";
-import TopNavbar2 from "@/components/top-navbar-2";
-import Slider from "@/components/slider";
-import Footer from "@/components/pup-home-footer";
-import Footer2 from "@/components/pup-home-footer2";
+import TopNavbar from "@components/top-navbar";
+import TopNavbar2 from "@components/top-navbar-2";
+import Slider from "@components/slider";
+import Footer from "@components/pup-home-footer";
+import Footer2 from "@components/pup-home-footer2";
 import Image from 'next/image';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useState } from 'react';
-import { announcements, iconLinks, pupNews, images } from "@/helpers/main_data";
+import { announcements, iconLinks, pupNews, images } from "@helpers/main_data";
+import Modal from "@components/modal";
 
 const Home = () => {
 
@@ -48,14 +49,14 @@ const Home = () => {
                         </div>
                         <div className="flex flex-wrap overflow-auto overflow-x-hidden content">
                             {announcements.map((announcement, index) =>(
-                                <div key="" className="announcements">
+                                <div key={index} className="announcements">
                                     <a href={announcement.link}>{announcement.title}</a>
                                     <p>Posted: {announcement.date}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className="w-7/10 content-container md:w-2/5 ">
+                    <div className="w-full content-container md:w-2/5 md:h-96 news-slider">
                         <div className="title">
                             <h1 className="mb-2 font-bold text-red-800">Latest News from the University</h1>
                             <div className="slider-buttons-container">
@@ -71,11 +72,11 @@ const Home = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="pt-5 pr-5 ">
-                            <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showIndicators={false} showArrows={false}>
+                        <div className="pt-5 pr-5 ehe">
+                            <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showIndicators={false} showArrows={false} autoPlay className="news-slider">
                                 {pupNews.map((news, index) => (
-                                    <div key="" className="flex flex-col flex-wrap ">
-                                        <div key={index}>
+                                    <div key={index} className="flex flex-col flex-wrap">
+                                        <div>
                                             <img src={news.src} alt={`Image ${index}`} className="news-img"/>
                                         </div>
                                         <div className="flex flex-col pt-5 pl-2 hover:underline">
@@ -89,7 +90,7 @@ const Home = () => {
                     </div>
                     <div className="flex flex-col flex-wrap content-center justify-center w-full content-container md:w-1/5">
                         {images.map((image, index) =>(
-                            <a href="#"  key=""  className="flex flex-wrap justify-center mb-2 img-container">
+                            <a href="#"  key={index}  className="flex flex-wrap justify-center mb-2 img-container">
                                 <Image src={image.src} alt="" width={200} height={150}/>
                             </a>
                         ))}
@@ -99,7 +100,7 @@ const Home = () => {
             <div className="flex flex-wrap justify-center mt-10 border-b-[1px] border-grey">
                 <div className="flex flex-col justify-center w-3/4 h-auto embed md:flex-row">
                     <div className="mr-0 md:mr-5 twitter">
-                    <a className="twitter-timeline" data-theme="dark" href="https://twitter.com/papicurl?ref_src=twsrc%5Etfw">Tweets by papicurl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a className="twitter-timeline" data-theme="dark" href="https://twitter.com/papicurl?ref_src=twsrc%5Etfw">Tweets by papicurl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                     <div className="justify-center w-full ml-5 md:w-auto">
                         <div className="mb-6 yt-spot-container">
@@ -111,6 +112,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Modal/>
             <Footer/>
             <Footer2/>
         </div>

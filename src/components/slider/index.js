@@ -17,24 +17,9 @@ const Slider = () =>{
       
       const [isHovered, setIsHovered] = useState(false);
       const [slideIndex, setSlideIndex] = useState(0);
-      const [buttonHovered, setButtonHovered] = useState(false)
 
       const arrowStyles = {
-        position: 'absolute',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        zIndex: 2,
-        backgroundColor: buttonHovered ? '#111' : 'rgba(0,0,0,0.3)' ,
-        opacity: isHovered ? 0.5 : 0,
-        borderRadius: 0,
-        width: '100px',
-        height: '100px',
-        border: 'none',
-        outline: 'none',
-        cursor: 'pointer',
-        fontSize: '1.5em',
-        transition: 'opacity 0.5s ease',
-        color: buttonHovered ? '#888' : '#fff'
+        opacity: isHovered ? 0.5 : 0
       };
       const handlePrevClick = () => {
         setSlideIndex((slideIndex - 1 + images.length) % images.length);
@@ -71,20 +56,20 @@ const Slider = () =>{
       
 
       return (
-        <div className='slider' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showArrows={false} renderIndicator={customIndicator}>
+        <div className='main-slider' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showArrows={false} renderIndicator={customIndicator} autoPlay>
                 {images.map((image, index) => (
                     <div key={index}>
                         <img src={image.src} alt={`Image ${index}`} />
                     </div>
                 ))}
             </Carousel>
-            <button onClick={handlePrevClick} style={{ ...arrowStyles, left: 0 }} onMouseEnter={() => setButtonHovered(true)} onMouseLeave={() => setButtonHovered(false)}>
+            <button onClick={handlePrevClick} style={{ ...arrowStyles, left: 0 }} className='arrowStyles'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={4} stroke="currentColor" className="w-10 h-10">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
             </button>
-            <button onClick={handleNextClick} style={{ ...arrowStyles, right: 0  }} onMouseEnter={() => setButtonHovered(true)} onMouseLeave={() => setButtonHovered(false)}>
+            <button onClick={handleNextClick} style={{ ...arrowStyles, right: 0  }} className='arrowStyles'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={4} stroke="currentColor" className="w-10 h-10">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>

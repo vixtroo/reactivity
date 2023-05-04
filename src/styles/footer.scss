@@ -1,0 +1,142 @@
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 25%;
+    height: 288px;
+}
+
+.footer-links-container-container{
+    width: 1170px;
+}
+
+.footer-links-container-container p{
+    color: #800;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.quick-links{
+    line-height: 26px;
+    color:  rgb(100 116 139);
+}
+
+.quick-links li:hover{
+    text-decoration: underline;
+}
+
+.weblinks a{
+    padding-right: 5px;
+    color: #666666;
+}
+
+.weblinks a:hover{
+    text-decoration: underline;
+}
+
+.contact-us li{
+// footer
+    color: #555555;
+    width: auto;
+}
+
+.contact-us span{
+    color:#555555;
+    font-weight: 600;
+}
+
+.social-icons{
+    display: flex;
+    flex-wrap: wrap;
+    height: 48px;
+    width: 48px;
+    background-color: #800;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    margin-right: 25px;
+    transition: .3s;
+}
+
+.credit p{
+    color: #555555;
+}
+
+.footer2-items{
+    display: flex;
+    height: 224px;
+}
+
+.footer2-items li{
+    color: #888888;
+}
+
+.footer2-items h1{
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    color: #555555;
+}
+
+.footer2-items p{
+    font-size: 10px;
+    color: #666666;
+}
+
+.footer2-items li:hover{
+    text-decoration: underline;
+}
+
+.content-container-container{
+    width: 1170px;
+}
+
+@media screen and (max-width: 768px){
+
+    .footer-links-container-container a,
+    .footer-links-container-container p,
+    .footer-links-container-container h1,
+    .contact-us li{
+        font-size: 36px;
+    }
+
+    .footer-links-container-container{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-content: flex-start;
+        padding: 15px;
+    }
+    .footer-links{
+        width: 100%;
+        height: auto;
+    }
+    .footer2-items{
+        height: auto;
+        width: 100%;
+    }
+    .footer2-items p{
+        width: 100%;
+    }
+    .quick-links, .footer2-items li{
+        line-height: 60px;
+    }
+    .credit p{
+        font-size: 26px;
+    }
+    .contact-us,
+    .weblinks{
+        width: 900px;
+    }
+    .social-icons{
+        transform: scale(2.5);
+        margin-left: 10px;
+        margin-right: 120px;
+    }
+    .footer2-items img{
+        height: 350px;
+        width: 350px;
+    }
+}

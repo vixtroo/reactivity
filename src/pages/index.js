@@ -22,6 +22,7 @@ export default function Home() {
           <p>
             Get started by editing&nbsp;
             <code className={styles.code}>src/pages/index.js</code>
+            <i className="fa-user"> </i>
           </p>
           <div>
             <a
