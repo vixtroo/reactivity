@@ -91,3 +91,28 @@
     }
   }
 
+  @media screen and (max-width: 768px){
+
+    .modal-content{
+      width: 100%;
+      height: auto;
+      top: 840px;
+    }
+    .btnCancel{
+      font-size: 48px;
+    }
+    .logo-container img{
+      width: 350px;
+      height: 350px;
+      margin-top: 50px;
+    }
+    .logos-container{
+      transform: scale(1.5);
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .modal-items-container{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }

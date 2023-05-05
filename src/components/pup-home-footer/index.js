@@ -29,7 +29,7 @@ const Footer = () =>{
                 </div>
                 <div className="flex flex-col flex-wrap w-1/2 h-auto md:h-72">
                     <p className="mt-7 md:mt-0">KEEP IN TOUCH</p>
-                    <div className="flex flex-wrap content-center justify-between h-40 pl-5 mb-5 md:h-14 social-icons-container">
+                    <div className="flex flex-wrap content-center justify-between h-40 pl-5 mb-5 md:pl-0 md:h-14 social-icons-container">
                         <ul className="flex inline">
                             {socialIcons.map((socialIcon, index)=>(
                                 <li key={index}>

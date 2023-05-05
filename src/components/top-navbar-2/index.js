@@ -12,7 +12,7 @@ const TopNavbar2 = () =>{
 
     return(
         <div className="flex flex-wrap content-center justify-between h-32 px-8 md:justify-center md:h-24 nav2-container md:px-0">
-            <div className="flex flex-wrap justify-between w:full md:w-3/4">
+            <div className="flex flex-wrap justify-between pl-0 nav2 md:pl-5">
                 <div className="flex">
                     <div>
                         <a href="#"><Image src="/pup-logo.png" alt='' height={90} width={90}/></a>

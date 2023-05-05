@@ -25,8 +25,10 @@ const Home = () => {
     return (
         <div className="flex flex-col flex-wrap justify-center">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-            <TopNavbar />
-            <TopNavbar2/>
+            <div className="navbar-container">
+                <TopNavbar />
+                <TopNavbar2/>
+            </div>
             <Slider/>
             <div className="flex flex-wrap content-center justify-center border-b-[1px] border-grey h-52 other-links-container">
                 {iconLinks.map((iconLink, index)=>(
@@ -36,7 +38,7 @@ const Home = () => {
                             <i className={`fa ${iconLink.d}`}></i>
                         </div>
                     </div>
-                    <p>{iconLink.title}</p> 
+                    <p className="mt-2">{iconLink.title}</p> 
                 </a>
                 ))}
             </div>

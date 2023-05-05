@@ -47,10 +47,10 @@ const Modal = () =>{
                         <button className="btnCancel">+</button>
                     </div>
                     <div className="flex flex-col w-full text-center">
-                        <h1 className="font-serif text-xl font-semibold text-red-900 mb-7"><span>WELCOME TO THE</span><br/>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h1>
-                        <p className="text-lg mb-7">Please click/tap the appropriate link to help you in your navigation of our services</p>
+                        <h1 className="font-serif text-4xl font-semibold text-red-900 mb-7 md:text-xl"><span>WELCOME TO THE</span><br/>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h1>
+                        <p className="mt-4 text-3xl mb-7 md:text-lg md:mt-0">Please click/tap the appropriate link to help you in your navigation of our services</p>
                     </div>
-                    <div className="flex w-full">
+                    <div className="flex flex-col flex-wrap content-center w-full md:flex-row">
                         <div className="modal-items-container">
                             <div className="flex justify-center w-full py-6 logo-container">
                                 <Image src="/pup-logo2.png" alt="" width={200} height={200}/>
@@ -61,10 +61,10 @@ const Modal = () =>{
                                 ))}
                             </div>
                         </div>
-                        <div className="modal-items-container gap-y-1">
+                        <div className="modal-items-container gap-y-2 md:gap-y-1">
                             {ModalLinks.map((modalLink, index)=>(
-                              <a key={index} href={modalLink.link} className="modal-links-container w-full bg-red-800 py-2.5 px-4 h-11 rounded-sm hover:bg-red-900 flex-wrap content-center hover:pl-7 flex space-x-2 text-white">
-                                  <p className="text-lg text-white font-base"><i className={`mr-3 fa ${modalLink.d}`}></i>{modalLink.title}</p>
+                              <a key={index} href={modalLink.link} className="modal-links-container w-full bg-red-800 py-2.5 px-4 h-20 md:h-11 rounded-sm hover:bg-red-900 flex-wrap content-center hover:pl-7 flex space-x-2 text-white">
+                                  <p className="text-4xl text-white md:text-lg font-base"><i className={`mr-3 fa ${modalLink.d}`}></i>{modalLink.title}</p>
                               </a>
                             ))}
                         </div>

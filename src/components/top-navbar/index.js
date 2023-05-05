@@ -11,7 +11,7 @@ const TopNavbar = () => {
 
     return (
         <div className="flex flex-wrap content-center justify-center border-white h-20 md:h-10 nav-container border-b-[.5px]">
-            <div className="flex flex-wrap content-center justify-center w-3/4 lg:justify-between h-9 nav">
+            <div className="flex flex-wrap content-center justify-center lg:justify-between h-9 nav">
                 <div className="flex">
                     <div className="flex flex-wrap content-center h-10 top-navbar-links">
                         <ul className="flex inline text-3xl md:text-sm">
