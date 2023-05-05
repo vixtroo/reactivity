@@ -43,7 +43,7 @@ const Home = () => {
             <div className="flex flex-wrap content-center justify-center h-auto mt-14 ">
                 <div className="flex flex-wrap w-3/4 h-auto content-container-container">
                     <div className="w-full content-container md:w-2/5">
-                        <div className="title">
+                        <div className="mb-4 title">
                             <h1 className="mb-2 font-bold text-red-800">Announcements and Advisories</h1>
                         </div>
                         <div className="flex flex-wrap overflow-auto overflow-x-hidden content">
