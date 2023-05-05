@@ -1,4 +1,4 @@
-import { onlineServices, downloads, quickLinks, socialIcons, pupWebsite, contactUs } from "@/helpers/footer_data"
+import { onlineServices, downloads, quickLinks, socialIcons, pupWebsite, contactUs } from "@helpers/footer_data"
 
 const Footer = () =>{
 
