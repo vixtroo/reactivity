@@ -41,6 +41,7 @@ const Modal = () =>{
       
     return(
         <div className="z-10 bg-modal">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 <div className="modal-content">
                     <div className="w-full pt-2">
                         <button className="btnCancel">+</button>
@@ -63,10 +64,7 @@ const Modal = () =>{
                         <div className="modal-items-container gap-y-1">
                             {ModalLinks.map((modalLink, index)=>(
                               <a key={index} href={modalLink.link} className="modal-links-container w-full bg-red-800 py-2.5 px-4 h-11 rounded-sm hover:bg-red-900 flex-wrap content-center hover:pl-7 flex space-x-2 text-white">
-                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
-                                     <path d={modalLink.d}/>
-                                  </svg>
-                                  <p className="text-lg text-white font-base">{modalLink.title}</p>
+                                  <p className="text-lg text-white font-base"><i className={`mr-3 fa ${modalLink.d}`}></i>{modalLink.title}</p>
                               </a>
                             ))}
                         </div>

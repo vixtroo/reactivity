@@ -36,7 +36,10 @@
 }
 
 .other-links:hover{
-    text-decoration: underline;
+    p{
+        text-decoration: underline;
+    }
+
     .icon-border{
         color: white;
         background-color: #800;

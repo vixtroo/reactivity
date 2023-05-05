@@ -24,6 +24,7 @@ const Home = () => {
 
     return (
         <div className="flex flex-col flex-wrap justify-center">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <TopNavbar />
             <TopNavbar2/>
             <Slider/>
@@ -31,10 +32,8 @@ const Home = () => {
                 {iconLinks.map((iconLink, index)=>(
                 <a href={iconLink.link} className="other-links" key={index}>
                     <div className={`icon-container ${iconLink.margin}`}>
-                        <div className="icon-border">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
-                                <path clipRule="evenodd" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" d={iconLink.d} />
-                            </svg>
+                        <div className="text-3xl icon-border">
+                            <i className={`fa ${iconLink.d}`}></i>
                         </div>
                     </div>
                     <p>{iconLink.title}</p> 
@@ -100,11 +99,11 @@ const Home = () => {
             <div className="flex flex-wrap justify-center mt-10 border-b-[1px] border-grey">
                 <div className="flex flex-col justify-center w-3/4 h-auto embed md:flex-row">
                     <div className="mr-0 md:mr-5 twitter">
-                        <a className="twitter-timeline" data-theme="dark" href="https://twitter.com/papicurl?ref_src=twsrc%5Etfw">Tweets by papicurl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a className="twitter-timeline" data-theme="dark" href="https://twitter.com/papicurl?ref_src=twsrc%5Etfw">Tweets by papicurl</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
                     </div>
                     <div className="justify-center w-full ml-5 md:w-auto">
                         <div className="mb-6 yt-spot-container">
-                            <iframe className="yt" src="https://www.youtube.com/embed/oM6-umUNH-4" title="[오늘의 지수] EP.3 M/V BEHIND" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            <iframe className="yt" src="https://www.youtube.com/embed/oM6-umUNH-4" title="[오늘의 지수] EP.3 M/V BEHIND" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                         </div>
                         <div className="mb-2 yt-spot-container">
                             <iframe className="spotify"  src="https://open.spotify.com/embed/playlist/0whUCQp9szryvQjXBuNqFb?utm_source=generator" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
