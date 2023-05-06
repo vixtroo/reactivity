@@ -53,10 +53,9 @@ const Slider = () =>{
           />
         );
       };
-      
 
       return (
-        <div className='main-slider' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <div className="main-slider" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showArrows={false} renderIndicator={customIndicator} autoPlay>
                 {images.map((image, index) => (
                     <div key={index}>

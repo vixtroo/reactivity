@@ -1,14 +1,8 @@
 import Image from 'next/image'
 import {Formik, Field, Form} from "formik"
+import { topNav2links } from '@helpers/nav_data'
 
 const TopNavbar2 = () =>{
-
-    const topNav2links = [
-        {link: '#', title: 'ABOUT PUP'},
-        {link: '#', title: 'ACADEMIC'},
-        {link: '#', title: 'STUDENTS'},
-        {link: '#', title: 'RESEARCH'},
-    ]
 
     return(
         <div className="flex flex-wrap content-center justify-between h-32 px-8 md:justify-center md:h-24 nav2-container md:px-0">
@@ -22,10 +16,16 @@ const TopNavbar2 = () =>{
                             <a href="#"><h1 className='font-bold text-red-800 hover:underline'>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h1></a>
                             <a href="#"><h2 className='text-sm font-bold text-slate-600'>THE COUNTRY'S 1ST POLYTECHNICU</h2></a>
                         </div>
-                        <div className="flex-wrap content-center h-6 font-bold top-navbar2-links mt-3.5 ">
-                            <ul className="flex inline font-serif text-sm text-red-800">
+                        <div className="flex-wrap content-center h-6 font-bold top-navbar2-links mt-3.5">
+                            <ul className="flex inline font-serif text-sm text-red-800 pup-links">
                                 {topNav2links.map((topNav2link, index)=>(
-                                    <li key={index}><a href={topNav2link.link}>{topNav2link.title}</a></li>
+                                    <li key={index}className='h-7'><a href={topNav2link.link}>{topNav2link.title}</a>
+                                        <ul className="dropdown-container">
+                                            {topNav2link.subLinks.map((subLink, subIndex)=>(
+                                                <a key={subIndex} href={subLink.url}><li>{subLink.subLinkTitle}</li></a>
+                                            ))}
+                                        </ul>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
