@@ -177,6 +177,7 @@
     position: fixed;
     bottom: 10vh;
     right: 25px;
+    z-index: 1;
 }
 
 .back-to-top {
@@ -272,6 +273,21 @@
         width: 95%;
         height: 100%;
         border-radius: 20px;
+    }
+    .services-widget,
+    .back-to-top,
+    .messenger{
+        transform: scale(2.5);
+        margin-right: 40px;
+    }
+    .services-widget{
+        bottom: 70vh;
+    }
+    .messenger{
+        bottom: 20vh;
+    }
+    .back-to-top{
+        bottom: 7vh;
     }
 }
 // MAIN END
