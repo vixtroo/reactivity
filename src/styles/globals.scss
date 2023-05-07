@@ -4,6 +4,7 @@
 
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 // MAIN START
@@ -125,6 +126,89 @@
 .spotify{
     width: 750px;
     height:360px;
+}
+
+// WIDGETS
+
+.services-widget {
+    position: fixed;
+    display: block;
+    bottom: 30vh;
+    right: 10px;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: normal;
+    color: #fff !important;
+    border-radius: 25px !important;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    background-color: rgba(188, 188, 188, 0.6);
+    -webkit-backdrop-filter: blur(10px) saturate(125%) !important;
+    backdrop-filter: blur(10px) saturate(125%) !important;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.services-widget:hover{
+    width: 180px;
+    background-color: rgba(78, 78, 78, 0.6);
+    i{
+        margin-right: 5px;
+    }
+}
+
+.messenger{
+    width: 44px;
+    height: 44px;
+    background-color: #880000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 44px;
+    position: fixed;
+    bottom: 10vh;
+    right: 25px;
+}
+
+.back-to-top {
+    // display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    bottom: 18px;
+    right: 13px;
+    z-index: 1;
+    background-color: rgba(255, 188, 0, 0.4);
+    width: 48px;
+    height: 48px;
+    border-radius: 25px !important;
+    -webkit-backdrop-filter: blur(10px) saturate(125%) !important;
+    backdrop-filter: blur(10px) saturate(125%) !important;
+    transition: .2s;
+}
+
+.back-to-top i {
+    display: block;
+    line-height: 48px;
+    font-size: xx-large;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 25px !important;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 

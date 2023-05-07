@@ -65,13 +65,14 @@
 // DROPDOWN
 
 .dropdown-container{
-    // display: none;
+    display: none;
     visibility: hidden;
     position: absolute;
     background-color: hsla(0,0%,100%,.88);
     width: 300px;
     height: auto;
     box-shadow:0px 20px 44px 0px rgb(0 0 0 / 68%);
+    -webkit-backdrop-filter: blur(10px) saturate(125%) !important;
     backdrop-filter: blur(10px) saturate(168%) !important;
     border-radius: 8px;
     border: .5px solid #800;
@@ -99,6 +100,7 @@
 
 .pup-links li:hover > .dropdown-container{
     visibility: visible;
+    display: block;
 }
 
 
