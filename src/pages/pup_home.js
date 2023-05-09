@@ -102,7 +102,7 @@ const Home = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="pt-5 pr-5 ehe">
+                        <div className="pt-5 pr-5 news-slider-container">
                             <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showIndicators={false} showArrows={false} autoPlay className="news-slider">
                                 {pupNews.map((news, index) => (
                                     <div key={index} className="flex flex-col flex-wrap">

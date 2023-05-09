@@ -1,6 +1,7 @@
 // MAIN SLIDER START
 .main-slider{
     height: 70%;
+    position: relative;
 }
 
 .carousel-slider-container{
@@ -15,6 +16,7 @@
     align-content: center;
     justify-content: center;
 }
+
 // MAIN SLIDER END
 
 // LATEST NEWS START
@@ -53,7 +55,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.3);        border-radius: 0;
+    background-color: rgba(0,0,0,0.3);        
+    border-radius: 0;
     width: 100px;
     height: 100px;
     border: none;
@@ -90,9 +93,14 @@
         height: 1400px;
         margin-bottom: 100px;
     }
-    .ehe{
+    .news-slider-container{
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .main-slider{
+        height: 420px;
     }
 }

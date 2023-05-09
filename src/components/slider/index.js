@@ -57,7 +57,7 @@ const Slider = () =>{
       return (
         <div className="main-slider" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <div className="carousel-slider-container">
-              <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showArrows={false} renderIndicator={customIndicator} autoPlay>
+              <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={slideIndex} onChange={(index) => setSlideIndex(index)} showArrows={false} renderIndicator={customIndicator} autoPlay swipeable={true} emulateTouch={true}>
                   {images.map((image, index) => (
                       <div key={index}>
                           <img src={image.src} alt={`Image ${index}`} />

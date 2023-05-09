@@ -33,7 +33,7 @@ const Footer = () =>{
                         <ul className="flex inline">
                             {socialIcons.map((socialIcon, index)=>(
                                 <li key={index}>
-                                    <a href={socialIcon.link} className={`social-icons ${socialIcon.class}`}>
+                                    <a href={socialIcon.link} className={`social-icons ${socialIcon.class}`} target="blank">
                                         <svg xmlns="http://www.w3.org/2000/svg" className={socialIcon.className} fill="currentColor" viewBox="0 0 24 24">
                                             <path transform={socialIcon.transform} d={socialIcon.d} />
                                         </svg>
