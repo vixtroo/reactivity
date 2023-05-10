@@ -1,0 +1,160 @@
+.contact-us-content-container{
+    width: 1170px;
+}
+
+.contact-us-content-container h1{
+    font-size: 24px;
+    color: #800;
+    margin-bottom: 10px;
+}
+
+.contact-us-content-container p{
+    color: #666;
+    font-size: 18px;
+}
+
+.contact-us-content-container h2{
+    color: #800;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-us-content-container h3{
+    color: #800;
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.inquire-pup p{
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+//TABLE
+
+.table-head{
+    background-color: #f8f8f8;
+    font-weight: normal;
+    font-size: 16px;
+    color: #800;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1em;
+    height: 32.8px;
+}
+
+.table-col1,
+.table-col2,
+.table-head
+{
+ border: 1px solid #eee;
+ padding: 8px;
+}
+
+.table-col1,
+.table-col2{
+    font-size: 13.333333px;
+    color: #666;
+    font-weight: 400;
+    vertical-align: top;
+}
+
+.table-data:hover{
+    .table-col1, .table-col2{
+        color: #800;
+    }
+}
+
+// INQUIRIES
+
+.inquiries-data-container p{
+    border-left: 4px #eee solid;
+    padding-left: 20px;
+}
+
+.inquiries-data-container strong{
+    font-weight: 500;
+}
+
+//CONTENTS
+
+.right-col h1{
+    font-size: 18px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    width: 50px;
+}
+
+.right-col li{
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    transition: .2s;
+}
+
+.right-col li:hover{
+    color: #800;
+    padding-left: 7px;
+}
+
+.content-link:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    .telephone-container{
+        padding-bottom: 50px;
+        border-bottom: 1px solid #eee;
+    }
+    .right-col, .left-col{
+        padding-left: 20px;
+    }
+    .contact-us-content-container h1{
+        font-size: 42px;
+    }
+    .contact-us-content-container h2{
+        font-size: 40px;
+    }
+    .contact-us-content-container h3{
+        font-size: 38px;
+        margin: 40px 0 10px 0;
+    }
+    .contact-us-content-container p{
+        color: #666;
+        font-size: 36px;
+    }
+    .inquire-pup p{
+        font-size: 56px;
+    }
+    .table-head{
+        font-weight: normal;
+        font-size: 36px;
+        color: #800;
+        line-height: 1em;
+        height: 32.8px;
+    }
+    .table-col1,
+    .table-col2{
+    font-size: 32px;
+    }
+    .table-col1{
+        width: 700px;
+    }
+    .inquiries-data-container p{
+        line-height: 70px;
+        border-left: 8px #eee solid;
+    }
+    .table-col1,
+    .table-col2,
+    .table-head
+    {
+     padding: 14px;
+    }
+    .content-link{
+        font-size: 40px;
+    }
+}

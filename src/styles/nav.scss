@@ -29,8 +29,7 @@
 }
 
 .nav-container, .nav2-container{
-    backdrop-filter: blur(2px) saturate(60%);
-
+    backdrop-filter: blur(1px) saturate(80%);
 }
 .nav2-container h2, .footer-links a{
     color: #666666;
@@ -113,6 +112,9 @@
 
 .mobile-menu ul{
     color: #666;
+    a{
+        width: 90%;
+    }
 }
 
 .nav-arrow {

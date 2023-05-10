@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Logos, ModalLinks } from "@helpers/modal_data";
-import { Services } from "@components/floating-buttons";
 
 const Modal = () =>{
 

@@ -1,8 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
+
 const TopNavbar = () => {
 
     const topNavLinks = [
-        {link: '#', title: 'Home', class: ''},
+        {link: '/pup_home', title: 'Home', class: ''},
         {link: '#', title: 'Good Governance', class: 'hidden md:flex'},
         {link: '#', title: 'Transparency', class: 'hidden md:flex'},
         {link: '#', title: 'International Affairs', class: 'hidden lg:flex'},
@@ -17,14 +19,14 @@ const TopNavbar = () => {
                         <ul className="flex inline text-3xl md:text-sm">
                                 <li className='justify-center w-16'><a href="#"><Image src="/govph.png" alt="" width={30} height={30}/></a></li>
                                 {topNavLinks.map((topNavLink, index) => (
-                                    <li key={index}><a href={topNavLink.link} className={topNavLink.class}>{topNavLink.title}</a></li>
+                                    <li key={index}><Link href={topNavLink.link} className={topNavLink.class}>{topNavLink.title}</Link></li>
                                 ))}
                         </ul>
                     </div>
                 </div>
                 <div>
                     <div className="flex flex-wrap content-center h-10 text-3xl md:text-sm contact hover:bg-red-800 hover:text-white hover:cursor-pointer">
-                        <a href="#">Contact Us</a>
+                        <Link href="/contact_us">Contact Us</Link>
                     </div>
                 </div>  
             </div>
