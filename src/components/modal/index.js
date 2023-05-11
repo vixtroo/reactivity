@@ -4,7 +4,7 @@ import { Logos, ModalLinks } from "@helpers/modal_data";
 
 const Modal = () =>{
 
-    const [isModalOpen, setIsModalOpen] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const closeModal = () => {
       setIsModalOpen(false);
@@ -15,6 +15,10 @@ const Modal = () =>{
         closeModal();
       }
     };
+    useEffect(() => {
+      const isMainPage = window.location.pathname === '/pup_home';
+      setIsModalOpen(isMainPage);
+    }, []);
 
     useEffect(() => {
       document.addEventListener('keydown', onEscapePress);

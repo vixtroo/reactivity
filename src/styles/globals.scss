@@ -287,5 +287,32 @@
     .messenger{
         bottom: 20vh;
     }
+
+    // INTERNATIONAL AFFAIRS
+    .international-img-container img{
+        width: 100%;
+    }
+    .services-list li{
+        font-size: 36px;
+        line-height: 2;
+    }
 }
 // MAIN END
+
+// INTERNATIONAL AFFAIRS
+
+.services-list li{
+    color: #666;
+}
+
+.articles-title{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.articles-title h2{
+    border-bottom: 1px solid #800;
+}

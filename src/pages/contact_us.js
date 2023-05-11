@@ -8,7 +8,7 @@ import { GeneralConcerns, InquiriesData, Paragraphs, ContentLinks } from "@helpe
 import Link from "next/link";
 import Modal from "@components/modal";
 
-const Home = () => {
+const Contact = () => {
 
     return (
         <div className="flex flex-col flex-wrap justify-center">
@@ -90,4 +90,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Contact

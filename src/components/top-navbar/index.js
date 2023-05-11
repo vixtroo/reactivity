@@ -7,7 +7,7 @@ const TopNavbar = () => {
         {link: '/pup_home', title: 'Home', class: ''},
         {link: '#', title: 'Good Governance', class: 'hidden md:flex'},
         {link: '#', title: 'Transparency', class: 'hidden md:flex'},
-        {link: '#', title: 'International Affairs', class: 'hidden lg:flex'},
+        {link: '/dynamic', title: 'International Affairs', class: 'hidden lg:flex'},
         {link: '#', title: 'Bid Notices and Invitation', class: 'hidden md:flex'},
     ]
 
